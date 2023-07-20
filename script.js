@@ -1,6 +1,3 @@
-
-
-// when we load the window the next 7 lines will run
 window.onload = () => {
     const button = document.querySelector('button[data-action="change"]');
     button.innerText = '﹖';
@@ -9,16 +6,13 @@ window.onload = () => {
     renderPlaces(places);
 };
 
-
-
-
 function staticLoadPlaces() {
     return [
         {
             name: 'Pokèmon',
             location: {
-                lat: 53.098785,
-                lng: 8.799713,
+                // lat: <your-latitude>,
+                // lng: <your-longitude>,
             },
         },
     ];
@@ -61,8 +55,6 @@ var setModel = function (model, entity) {
 
     entity.setAttribute('gltf-model', model.url);
 
-
-    // will put the info from the model on the top of the camera page
     const div = document.querySelector('.instructions');
     div.innerText = model.info;
 };
